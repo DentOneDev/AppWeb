@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-column: 1fr;
+  background-color: #405060;
+}
+.contenedor {
+  align-items: center;
+  align-content: center;
+  margin: 2em;
+  background-color: #58b8e8;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.3em;
+  margin: 1em;
+  transition: 2px ease-in-out;
+}
+
+.btn:hover {
+  color: rgb(28, 101, 185);
+  box-shadow: 0 0 50px 50px #202830 inset, 0 0 10px #333;
+}
+
+.tr .td {
+  background-color: rgba(14, 102, 253, 0.719);
+  align-content: center;
+  padding: 20px 10px 20px 5px;
+  text-align: center;
+}
+
+.th {
+  align-content: center;
+  padding: 1em 3em;
+  text-align: center;
+}
