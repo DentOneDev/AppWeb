@@ -48,7 +48,7 @@ if (isset($_POST['Actualizar'])) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Actualizar | Usuarios </title>
+	<title>Registro de Usuarios </title>
 	<!--CSS-->
 	<link rel="stylesheet" href="../css/style_usuarios.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -69,7 +69,7 @@ if (isset($_POST['Actualizar'])) {
 			<label for="pwd">Contraseña</label>
 			<input type="password" name="pwd" id="pwd" value="<?php if ($resultado) echo $resultado['password']; ?>" placeholder="Escribe aqui tu contraseña">
 			<div class="btn_group">
-				<a href="../php/insertar_usuarios.php" class="cancelar">Cancelar</a>
+				<a href="../php/xonsulta_usuarios.php" class="cancelar">Cancelar</a>
 				<input type="submit" name="Actualizar" id="guardar" value="Actualizar" class="guardar">
 			</div>
 		</form>
