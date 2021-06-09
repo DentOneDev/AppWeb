@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../fonts/NunitoSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  background-color: oldlace;
+  font-family: "Nunito";
+  font-size: 1em;
+}
+
+.contenedor{
+  background-color: #ffffff;
+  width: 35%;
+  margin:4em auto;
+  box-shadow: 0 5px 10px rgba(0 0 0/ 50%);
+  border-radius: 15px;
+}
+
+.contenedor .titulo{
+  background-color: rgba(0, 0, 0, .8);
+  width: 100%;
+  display: block;
+  padding: 0.6em 0.8em;
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.contenedor form{
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1em;
+  border-radius: 15px;
+}
+
+.contenedor form label{
+  width: 100%;
+  display: block;
+  padding: 0.5em;
+  font-size: 1em;
+  color: #111111;
+}
+
+input[type=text], input[type=password] {
+  font-size: 1em;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: 0.5em;
+  padding: 1em 0.5em;
+  font-family: "Nunito";
+  border-bottom: 1px  solid #dfdede;
+}
+
+/*
+Inicio de la validacion    8)
+*/
+.contenedor form .errores{
+  color: red;
+  padding: 5px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  width: 100%;
+  background: rgba(255, 0, 0, .3);
+  border-radius: 5px;
+  display: none;
+}
+
+/*FIn de validacion */
+.contenedor form .guardar{
+  border: none;
+  border-radius: 6px;
+  display: block;
+  font-family: "Nunito";
+  font-size: 1.2em;
+  padding: 0.5em 1.2em;
+  outline: none;
+  cursor: pointer;
+  margin: 1em auto;
+  background: rgba(0, 0, 0, .8);
+  text-decoration: none;
+  color:  #ffffff;
+}
+
+.contenedor form .guardar:hover{
+  display: block;
+  font-family: "Nunito";
+  font-size: 1.2em;
+  padding: 0.5em 1.2em;
+  outline: none;
+  cursor: pointer;
+  margin: 1em auto;
+  background: #7c777791;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .8);
+  
+}

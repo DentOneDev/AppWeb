@@ -1,4 +1,5 @@
 <?php
+    require('seguridad.php');
     $id = $_GET["Id"];
 
     require("conexion.php");

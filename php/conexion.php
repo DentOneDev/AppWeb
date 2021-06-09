@@ -1,3 +1,6 @@
+<?php
+	include('seguridad.php');
+?>
 <?php  
 	try{
 		$conexion = new PDO('mysql:host=localhost; dbname=pruebas', 'dev1', '12345678');

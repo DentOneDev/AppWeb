@@ -1,5 +1,7 @@
 <?php
 
+	include('seguridad.php');
+
 $contrasena = "12345678";
 $usuario = "dev1";
 $nombre_base_de_datos = "pruebas";

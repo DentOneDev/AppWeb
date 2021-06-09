@@ -1,4 +1,7 @@
 <?php
+	include('seguridad.php');
+?>
+<?php
     include_once('conexion.php');
 
     if(isset($_GET['Id']) ){
@@ -56,6 +59,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet"> 
 	<!--JS-->
 	<script src="../js/mayusculas.js"></script>
+	<script src="../js/jquery-1.11.1.js"></script>
 </head>
 <body>
 
@@ -63,16 +67,17 @@
 		<label class="titulo">Actulaizar Datos de Usuario</label>
 		<form action="" name="formulario" method="POST">
 			<label for="nombre">Nombre</label>
-			<input type="text" name="nombre" id="nombre" value="<?php if($resultado) echo $resultado['nombre']; ?>" placeholder="Escribe aqui tu nombre" onblur='mayusculas(this.name)'>
+			<input type="text" name="nombre" id="nombre" value="<?php if($resultado) echo $resultado['nombre']; ?>" placeholder="Escribe aqui tu nombre" onblur='mayusculas(this.name)' onkeyup="checaMensaje(this.value)" >
 			<label for="apellidos" >Apellidos</label>
-			<input type="text" name="apellidos" id="apellidos" value="<?php if($resultado) echo $resultado['apellidos']; ?>" placeholder="Escribe aqui tus apellidos" onblur="mayusculas(this.name)">
+			<input type="text" name="apellidos" id="apellidos" value="<?php if($resultado) echo $resultado['apellidos']; ?>" placeholder="Escribe aqui tus apellidos" onblur="mayusculas(this.name)" onkeyup="checaMensaje(this.value)">
 			<label for="pwd">Contraseña</label>
-			<input type="password" name="pwd" id="pwd" value="<?php if($resultado) echo $resultado['password']; ?>" placeholder="Escribe aqui tu contraseña">
+			<input type="password" name="pwd" id="pwd" value="<?php if($resultado) echo $resultado['password']; ?>" placeholder="Escribe aqui tu contraseña" onkeyup="checaMensaje2(this.value) ">
 			<div class="btn_group">
 				<a href="../php/xonsulta_usuarios.php" class="cancelar">Cancelar</a>
 				<input type="submit" name="Actualizar" id="guardar" value="Actualizar" class="guardar">
 			</div>
 		</form>
 	</div>
+	<script src="../js/vlogin.js"></script>
 </body>
 </html>

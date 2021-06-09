@@ -1,4 +1,5 @@
 <?php  
+	require('seguridad.php');
 	require_once("conexion.php");
 
 	$nombre = $_POST["nombre"];

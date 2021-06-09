@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de usuarios</title>
-    <link rel="stylesheet" href="../css/estilos_consulta.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-</head>
-
-<body>
-    <?php
+<?php 
+    include("seguridad.php");
+?>
+<?php
         include_once 'conexion.php';
 
         $sql = "SELECT * FROM  usuarios ORDER BY Id ASC";
@@ -19,7 +9,21 @@
         $result->execute();
         $tot_rows = $result->rowCount();
         $row = $result->fetchAll();
-    ?>
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido: <?php echo $_SESSION['usuario'];?> </title>
+    <link rel="stylesheet" href="../css/estilos_consulta.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<body>
     <header>
         <nav>
             <div class="logo"><img src="../img/logo.png" alt="Logo UMB" title="UMB" ></div>
@@ -27,7 +31,7 @@
                 <a href="xonsulta_usuarios.php"> <img class="logos" src="../img/home.svg" alt=""></a>
                 <a href="../html/alta_usuarios.html"> <img class="logos" src="../img/plus.svg" alt=""></a>
                 <a href="xonsulta_usuarios.php"><img class="logos" src="../img/users.svg" alt=""></a>
-                <a href="#"><img class="logos" src="../img/power-off.svg" alt=""></a>
+                <a href="logout.php"><img class="logos" src="../img/power-off.svg" alt=""></a>
             </div>
         </nav>
     </header>

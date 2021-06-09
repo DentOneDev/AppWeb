@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PHP-PDO</title>
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-	<!--USA LOCALHOST:83 CON APACHE2 -->
-	<div class="body">
-		<div class="titulo">
-			<h2>Bienvenido a esta aplicacion web en desarrollo.</h2>
-		</div>
-		<br>	<br>	<br>
-		<div class="presentacion">
-			<h4>Actualmente contamos con las siguientes opciones</h4>
-		</div>
-		<div class="opciones">
-			<ol>
-				<a href="html/alta_usuarios.html" class="usuarios">Registro</a>
-				<br>
-				<hr>
-				<a href="html/consulta.html" class="usuarios">Consulta de registros en html</a>
-				<br>
-				<hr>
-				<a href="php/consulta.php" class="usuarios">Consulta de registros con archivo php</a>
-			</ol>
-		</div>
-	</div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Control de Acceso</title>
+        <!-- CSS-->
+        <link rel="stylesheet" href="css/style_index.css" />
+        <!--    JS  -->
+        <script src="js/mayusculas.js"></script>
+        <script src="js/jquery-1.11.1.js"></script>
+    </head>
+    <body>
+        <!--USA LOCALHOST:83 CON APACHE2 -->
+        <div class="contenedor">
+            <label class="titulo" for=" "> Control De Acceso</label>
+            <form
+                action="php/comprobar_acceso.php"
+                method="POST"
+                name="formulario"
+            >
+                <label for="inputusuario">Tu Usuario</label>
+                <input
+                    type="text"
+                    name="inputusuario"
+                    id="inputusuario"
+                    placeholder="usuario"
+                    minlength="3"
+                    onblur='mayusculas(this.name)'
+                    onkeyup="checaMensaje(this.value)"
+                />
+                <label for="inputpwd">Tu Contraseña</label>
+                <input
+                    type="password"
+                    name="inputpwd"
+                    id="inputpwd"
+                    placeholder="contraseña"
+                    minlength="3"
+                    onkeyup="checaMensaje2(this.value)"
+                />
+                <!--        INICIO DE MENSAJES PARA VALIDAR                -->
+                <div id="mensaje1" class="errores">Completa el campo Usuario</div>
+                <div id="mensaje2" class="errores">El Usuario debe cobtener minimo 3 letras</div>
+                <div id="mensaje3" class="errores">El Usuario solo acepta letras de A-Z</div>
+                <div id="mensaje4" class="errores">Completa el campo de contraseña</div>
+                <!--        FIN DE MENSAJES PARA VALIDAR                -->
+                <input
+                    type="button"
+                    name="guardar"
+                    value="Iniciar Sesion"
+                    onclick="validar()"
+                    class="guardar"
+                />
+            </form>
+        </div>
+        <script src="js/vlogin.js"></script>
+    </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
-include_once('conexion.php');
+	include('seguridad.php');
+	include_once('conexion.php');
 /*
     if(isset($_GET['Id']) ){
         $id = $_GET['Id'];
@@ -70,7 +71,7 @@ if (isset($_POST['Actualizar'])) {
 			<input type="password" name="pwd" id="pwd" value="<?php if ($resultado) echo $resultado['password']; ?>" placeholder="Escribe aqui tu contraseña">
 			<div class="btn_group">
 				<a href="../php/xonsulta_usuarios.php" class="cancelar">Cancelar</a>
-				<input type="submit" name="Actualizar" id="guardar" value="Actualizar" class="guardar">
+				<input type="submit" name="Actualizar" id="guardar" value="Guardar" class="guardar">
 			</div>
 		</form>
 	</div>
